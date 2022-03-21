@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/48f37978a8.js" crossorigin="anonymous"></script> <!-- scrip para pegar icones, site: font awesome-->
     <meta name="Roberta da Silva">
-    <meta name="Kauna">
+    <meta name="Kauana">
     <meta name="Edmundo ">
     <meta name="Michele">
     <title>Tinder</title>
 </head>
 <body>
     <div id="form">
-        <form action="">
+        <form onsubmit="js(event)" action="#">
             <h2 class="title">Tinder</h2>
 
             <label for="username">Nome</label>
@@ -23,13 +23,14 @@
                 <input type="text" name="nome" id="nome" placeholder="nome">
             </div>
 
+
             <label for="interesses">Interesses</label>
             <div class="input">
                     <i class="fa-solid fa-heart-circle-check"></i>
-                <select name="Interesses">
+                <select name="Interesses" id="interesse">
                     <option value="#"></option>
-                    <option value="mulher">Mulher</option >
-                    <option value="homem">Homem</option>
+                    <option value="mulher">Mulheres</option >
+                    <option value="homem">Homens</option>
                 </select>
             </div>
 
@@ -43,7 +44,54 @@
                 <button type="submit">Enviar</button>
             </div>
         </form>
+
+        
     </div>
-    
+    <div class="iniciojs"></div>
+    <script>
+            function js(event){
+               event.preventDefault()
+               var div = document.querySelector(".iniciojs");
+               var nome = document.getElementById("nome").value;
+               var url = document.getElementById("url").value;
+               var newCard = `<div class="content">
+                                    <div class="card">
+                                        <div class="topcard">
+                                            <nav class="navbar">
+                                                <i class="fa-solid fa-user"></i>
+                                                <i class="fa-solid fa-fire-flame-curved"></i>
+                                                <i class="fa-solid fa-comments"></i>
+                                            </nav>
+                                            <div class="foto_acoes">
+                                                <div class="foto" style="background:url('` + url + `') center/cover">
+                                                    <div class="foto_texto">
+                                                        <div class="nome-idade">
+                                                            <h2>` + nome + `</h2>
+                                                            <h2></h2>
+                                                        </div>
+                                                        <div class="bio">
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="acoes">
+                                                    <div class="acao">
+                                                        <i class="fa-solid fa-x"></i>
+                                                    </div>
+                                                    <div class="acao">
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div><div class="acao">
+                                                        <i class="fa-solid fa-heart"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                div.insertAdjacentHTML('beforeend', newCard);
+            }
+        
+    </script>
 </body>
 </html>
