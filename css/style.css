@@ -127,7 +127,7 @@ input i{
 .foto{
     width: 100%;
     height: 70vh;
-    background:url(../img/prince-akachi-4Yv84VgQkRM-unsplash.jpg) center/cover;
+    background:url() center/cover;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
