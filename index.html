@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/48f37978a8.js" crossorigin="anonymous"></script> <!-- scrip para pegar icones, site: font awesome-->
+    <script src="https://kit.fontawesome.com/48f37978a8.js" crossorigin="anonymous"></script>
+    <!-- scrip para pegar icones, site: font awesome-->
     <meta name="Roberta da Silva">
     <meta name="Kauana">
     <meta name="Edmundo ">
     <meta name="Michele">
     <title>Tinder</title>
 </head>
+
 <body>
+    <div class="novo" onclick="acionarNovoCard();">
+        Criar novo card
+    </div>
     <div id="form">
         <form onsubmit="js(event)" action="#">
             <h2 class="title">Tinder</h2>
 
             <label for="username">Nome</label>
             <div class="input">
-                <i class="fa-solid fa-user"></i> <!--icone de user-->
-                <input type="text" name="nome" id="nome" placeholder="nome">
+                <i class="fa-solid fa-user"></i>
+                <!--icone de user-->
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
             </div>
 
 
             <label for="interesses">Interesses</label>
             <div class="input">
-                    <i class="fa-solid fa-heart-circle-check"></i>
+                <i class="fa-solid fa-heart-circle-check"></i>
                 <select name="Interesses" id="interesse">
-                    <option value="#"></option>
-                    <option value="mulher">Mulheres</option >
+                    <option value="#">Interesses</option>
+                    <option value="mulher">Mulheres</option>
                     <option value="homem">Homens</option>
                 </select>
             </div>
@@ -37,24 +44,23 @@
             <label for="">Url</label>
             <div class="input">
                 <i class="fa-regular fa-image"></i>
-                <input type="url" name="url" id="url" placeholder="url">
+                <input type="url" name="url" id="url" placeholder="Url da imagem">
             </div>
 
             <div class="btn">
                 <button type="submit">Enviar</button>
             </div>
         </form>
-
-        
     </div>
     <div class="iniciojs"></div>
     <script>
-            function js(event){
-               event.preventDefault()
-               var div = document.querySelector(".iniciojs");
-               var nome = document.getElementById("nome").value;
-               var url = document.getElementById("url").value;
-               var newCard = `<div class="content">
+        function js(event) {
+            event.preventDefault();
+            document.querySelector('#form').style.display='none'; //Edmundo
+            var div = document.querySelector(".iniciojs");
+            var nome = document.getElementById("nome").value;
+            var url = document.getElementById("url").value;
+            var newCard = `<div class="content">
                                     <div class="card">
                                         <div class="topcard">
                                             <nav class="navbar">
@@ -89,9 +95,15 @@
                                         </div>
                                     </div>
                                 </div>`;
-                div.insertAdjacentHTML('beforeend', newCard);
-            }
-        
+            div.insertAdjacentHTML('beforeend', newCard);
+            document.querySelector('.novo').style.display='flex'; //Edmundo
+        }
+
+        function acionarNovoCard() {
+            document.querySelector('#form').style.display='block'; //Edmundo
+        }
+
     </script>
 </body>
+
 </html>

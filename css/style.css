@@ -3,13 +3,19 @@
 *{
     margin: 0;
     padding: 0;
-    border: 0;}
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
 body{
-     width: 100%;
-     height: 100vh;
-     font-family: 'Poppins', sans-serif;
-     background: linear-gradient(-45deg, #ffce51, #ff2253, #fd5754);} /* deixa com várias cores*/
+    display: block;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 100vh;     
+    background: linear-gradient(-45deg, #ffce51, #ff2253, #fd5754);
+    } /* deixa com várias cores*/
 
 #form{
     position: relative;
@@ -21,32 +27,35 @@ body{
     padding: 60px;
     width: min-content;
     align-items: center;
-    color: #ff2278 ;}
+    color: #ff2278 ;
+}
 
 .title{
-     font-size: 1.8em;
-     margin-bottom: 10%;
+    font-size: 1.8em;
+    margin-bottom: 10%;
 }
+
 h2{
     text-align: center;
 }
 
 .input{
-      min-width: 280px;
-      border-radius: 22px;
-      border: 2px solid #6f7e8a;
-      padding: 2px;
-      margin: 0px 0px 8px -5px;
+    min-width: 280px;
+    border-radius: 22px;
+    border: 2px solid #6f7e8a;
+    padding: 10px;
+    margin: 0px 0px 8px -5px;
 }
 
 input i{
-        font-size: 1.12em;
-        padding: 5px;}
+    font-size: 1.12em;
+    padding: 5px;
+    outline: none;
+    }
 
 .input input{
     width: 80%;
     outline: none; /*deixa a borda invisivel*/
-    font-family: 'Poppins' sans-serif;
     transform: translateY(-10%);
     color: #6f7e8a;
     font-size: 11pt;
@@ -55,7 +64,6 @@ input i{
 .input select{
     width: 90%;
     outline: none;
-    font-family: 'Poppins' sans-serif;
     color: #6f7e8a;
     font-size: 11pt;
 }
@@ -64,10 +72,10 @@ input i{
     margin-top: 10%;
     width: 100%;
     text-align: center;
-
 }
+
 .btn button{
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(-45deg, #ffce51, #ff2253, #fd5754); /* deixa com várias cores*/
     width: 100%;
     height: 40px;
@@ -83,25 +91,28 @@ input i{
     background: linear-gradient(-45deg, #eec04c, #ec7054, #ee5a57)
 }
 
-                                                             /* css card*/  
+/* css card*/  
 
-.content{
-    display: flex;
+content {
+    display: grid;
     justify-content: center;
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 100vh;}
+    height: 100vh;
+}
 
 .card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 2px 18px #6669cd5c;
-    width: 400px;}
+    width: 400px;
+}
 
 .topcard {
     padding: 5px;
-    padding-top: 0px;}
+    padding-top: 0px;
+}
 
 .navbar{
     display: flex;
@@ -109,41 +120,50 @@ input i{
     justify-content: space-between;
     width: 100%;
     height: 40px;
-    cursor: pointer;}
+    cursor: pointer;
+}
 
 .navbar i{
     font-size: 1.2em;
     color: #acc7eccc;
-    font-size: 2rem;}
+    font-size: 2rem;
+}
 
-.navbar i:nth-child(2){         color: #fe466d;}
+.navbar i:nth-child(2){
+    color: #fe466d;}
 
 .foto_acoes{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3%;}
+    padding-top: 3%;
+}
 
 .foto{
     width: 100%;
-    height: 70vh;
-    background:url() center/cover;
+    height: 50vh;
+    background:url(../img/prince-akachi-4Yv84VgQkRM-unsplash.jpg) center/cover;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
     color: #eee;
-    box-shadow: 0 2px 10px 0 rgba(136, 136, 136, .77);}
+    box-shadow: 0 2px 10px 0 rgba(136, 136, 136, .77);
+}
 
-.foto_texto{                    padding: 15px;}
+.foto_texto{
+    padding: 15px;
+}
 
 .nome-idade{
     display:flex;
     margin-bottom: 3px;
-    align-items: center;}
+    align-items: center;
+}
 
 .nome-idade h2{
     font-size: 1.8em;
-    font-weight: 500;}
+    font-weight: 500;
+}
 
 .nome-idade h2:nth-child(2){
     margin-left: 10px;
@@ -157,7 +177,8 @@ input i{
     padding: 10px 0;
     justify-content: space-around;
     width: 100%;
-    height: 40px;}
+    height: 40px;
+}
 
 .acao{
     display: flex;
@@ -169,27 +190,56 @@ input i{
     border-radius: 50%;
     font-size: 1.7rem;
     box-shadow: 0 0px 0px 0 rgba(112, 125, 135, .15);
-    cursor: pointer;}
+    cursor: pointer;
+}
 
 .acoes .acao:nth-child(1){
     background:#e2264f;
-    color: #fff; }
+    color: #fff;
+}
 
 .acoes .acao:nth-child(2){
     background:#26ade2;
-    color: #fff;}
+    color: #fff;
+}
 
 .acoes .acao:nth-child(3){
     background:#26e2b3;
-    color: #fff;}
+    color: #fff;
+}
 
 
-@media only screen and (min-width: px) {
-.foto{ width: 367px; height: 684px;}
+@media only screen and (min-width: px){
+.foto{width: 367px; height: 684px;}
 
 .acoes{flex: initial;}    
 
 .foto_acoes{justify-content: center;}
 
 .navbar{ width: 400px; margin: auto;}
+}
+
+/* div do card */
+.iniciojs {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    width: 1600px;
+    max-width: 1800px;
+    margin: 0 auto;
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+.novo{
+    display: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 1.5em;
+    font-weight: 600;
+    background: #6669cd5c;
+    z-index: 1;
 }
