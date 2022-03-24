@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/48f37978a8.js" crossorigin="anonymous"></script>
+    <!-- scrip para pegar icones, site: font awesome-->
+    <meta name="Roberta da Silva">
+    <meta name="Kauana">
+    <meta name="Edmundo ">
+    <meta name="Michele">
+    <title>Tinder</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="novo" onclick="adicionarNovoCard();">
+        Criar novo card
+    </div>
+
+
+    <div id="form">
+
+
+        <form onsubmit="js(event)" action="#">
+            <h2 class="title">Tinder</h2>
+
+            <label for="username">Nome</label>
+            <div class="input">
+                <i class="fa-solid fa-user"></i>
+                <!--icone de user-->
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            </div>
+
+            <label for="hobby">Hobby</label>
+            <div class="input">
+                <i class="fa-solid fa-user"></i>
+                <!--icone de user-->
+                <input type="text" name="hobby" id="hobby" placeholder="Quais seus hobbies preferidos?">
+            </div>
+
+
+            <label for="interesses">Interesses</label>
+            <div class="input">
+                <i class="fa-solid fa-heart-circle-check"></i>
+                <select name="Interesses" id="interesse">
+                    <option value="#">Interesses</option>
+                    <option value="mulher">Mulheres</option>
+                    <option value="homem">Homens</option>
+                </select>
+            </div>
+
+            <label for="">Url</label>
+            <div class="input">
+                <i class="fa-regular fa-image"></i>
+                <input type="url" name="url" id="url" placeholder="Url da imagem">
+            </div>
+
+            <div class="btn">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="wrapper">
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+

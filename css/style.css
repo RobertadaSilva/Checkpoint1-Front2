@@ -1,31 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-*{
+* {
     margin: 0;
-    padding: 0;
     border: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    display: block;
-    justify-content: center;
-    align-items:center;
-    width: 100%;
-    height: 100vh;     
-    background: linear-gradient(-45deg, #ffce51, #ff2253, #fd5754);
-    } /* deixa com várias cores*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to left, #ffce51 0%, #fd5754 45%, #ff2253 55%);
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
 
+/* botão Novo Card */  
+.novo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    display: none;
+    padding: 15px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    height: 1.7em;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 1.2em;
+    font-weight: 600;
+    background: #f39353;
+    box-shadow: 0px 5px 5px #2425253f;
+    z-index: 1;
+}
+
+/* form */
 #form{
-    position: relative;
-    top: 50%;
+    display: none; /*flex*/
+    width: 95%;
+    justify-content: center;
+    position: fixed;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 10px;
-    padding: 60px;
-    width: min-content;
+    padding: 20px;
+
     align-items: center;
     color: #ff2278 ;
 }
@@ -91,22 +114,62 @@ input i{
     background: linear-gradient(-45deg, #eec04c, #ec7054, #ee5a57)
 }
 
-/* css card*/  
-
-content {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    height: 100vh;
+p {
+    font-size: 0.em;
 }
+
+  .wrapper {
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(214px, 1Fr) ) ;
+      color: rgb(233, 204, 204);
+      margin: 30px auto;
+  }
+  
+  .wrapper h2, p {
+    color:rgb(255, 255, 255);
+}
+
+    .box {
+        background-color: rgb(212, 229, 231);
+      color: rgb(122, 118, 118);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.822);
+      justify-content: center;
+      align-items: center;
+      padding: 32px 10px;
+      margin-left: 5px;
+      margin-top:5px;
+      max-width: 21rem;
+
+  
+      margin: 0 auto;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+.icon{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.342);
+    width: 180px;
+    height: 18rem;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+    .box img {
+        width: 100wh;
+    }
 
 .card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 2px 18px #6669cd5c;
-    width: 400px;
+    width: 15rem;
 }
 
 .topcard {
@@ -219,27 +282,12 @@ content {
 .navbar{ width: 400px; margin: auto;}
 }
 
-/* div do card */
-.iniciojs {
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    width: 1600px;
-    max-width: 1800px;
-    margin: 0 auto;
-    justify-content: center;
-    grid-gap: 10px;
-}
+    @media screen and (max-width: 1400px) {
+        #form{
+        width: auto;
+        }
+    }
 
-.novo{
-    display: none;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color: #eee;
-    font-size: 1.5em;
-    font-weight: 600;
-    background: #6669cd5c;
-    z-index: 1;
-}
+
+
+    
